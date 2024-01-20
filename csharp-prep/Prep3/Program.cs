@@ -12,8 +12,6 @@ class Program
         Console.Write("What is your guess? ");
         int guess = int.Parse(Console.ReadLine());
 
-
-
         if (guess < magicNumber)
         {
             Console.WriteLine("Higher");
@@ -26,7 +24,7 @@ class Program
 
         else
         {
-            Console.WriteLine("Correct");
+            Console.WriteLine("You guessed it!");
         }
 
     }
