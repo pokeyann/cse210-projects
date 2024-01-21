@@ -16,7 +16,7 @@ class Program
 
         do
         {
-            Console.WriteLine("Enter number: ");
+            Console.Write("Enter number: ");
             userNumber = int.Parse(Console.ReadLine());
 
             if (userNumber != 0)
@@ -26,13 +26,24 @@ class Program
 
         } while (userNumber != 0);
 
+        int sum = 0;
+
         foreach (int number in numbers)
         {
-            Console.WriteLine(number);
+            sum += number;
         }
 
-        /* add userNumber to list numbers*/
+        Console.WriteLine($"The sume is: {sum}");
 
+        double average = numbers.Average();
+
+        Console.WriteLine($"The average is: {average}");
+
+
+
+        double max = numbers.Max();
+
+        Console.WriteLine($"The largest number is: {max}");
 
     }
 }
