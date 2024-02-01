@@ -2,7 +2,11 @@ using System;
 
 public class Journal
 {
-  Prompt prompt = new Prompt();
+  public void journalEntry()
+  {
 
-  string userEntry = Console.ReadLine();
+    Console.WriteLine(DateTime.Now.ToString());
+  }
+
+
 }
