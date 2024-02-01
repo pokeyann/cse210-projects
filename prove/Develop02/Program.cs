@@ -2,13 +2,12 @@ using System;
 using System.ComponentModel;
 using System.Net;
 
+
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Develop02 World!");
-
-
 
         bool continueMenu = true;
 
@@ -28,8 +27,7 @@ class Program
             switch (menu)
             {
                 case "1":
-                    Prompt prompt = new Prompt();
-                    prompt.promptQuestions();
+
                     break;
 
                 case "2":
