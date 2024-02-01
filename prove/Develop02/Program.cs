@@ -27,7 +27,8 @@ class Program
             switch (menu)
             {
                 case "1":
-
+                    Prompt prompt = new Prompt();
+                    prompt.promptQuestions();
                     break;
 
                 case "2":
