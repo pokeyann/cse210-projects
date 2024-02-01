@@ -14,10 +14,17 @@ public class Prompt
 
     Random prompt = new Random();
 
-    int randomIndex = prompt.Next(0, questions.Count - 1);
+    for (int i = 0; i <= 5; i++)
+    {
+      int questionsIndex = prompt.Next(0, questions.Count);
+      questions.Add(questions[questionsIndex]);
+    }
+
+    foreach (string prmpt in questions)
+    {
+      Console.WriteLine(prmpt);
+    }
   }
-
-
 }
 
 

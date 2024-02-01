@@ -8,6 +8,8 @@ class Program
     {
         Console.WriteLine("Hello Develop02 World!");
 
+
+
         bool continueMenu = true;
 
         while (continueMenu)
@@ -26,8 +28,8 @@ class Program
             switch (menu)
             {
                 case "1":
-                    Console.WriteLine("1. Write");/*Do I need this writeline or just go straight to methos?*/
-
+                    Prompt prompt = new Prompt();
+                    prompt.promptQuestions();
                     break;
 
                 case "2":
@@ -48,9 +50,6 @@ class Program
                     continueMenu = false;
                     break;
 
-                    /*default:
-                        Console.WriteLine("Invalid choice, please enter a number between 1 and 5.");
-                        break;*/
             }
         }
     }
