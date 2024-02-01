@@ -1,9 +1,57 @@
 using System;
+using System.ComponentModel;
+using System.Net;
 
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Develop02 World!");
+
+        bool continueMenu = true;
+
+        while (continueMenu)
+        {
+
+            Console.WriteLine("Please select from the following choices: ");
+            Console.WriteLine("1. Write");
+            Console.WriteLine("2. Display");
+            Console.WriteLine("3. Load");
+            Console.WriteLine("4. Save");
+            Console.WriteLine("5. Quit");
+            Console.WriteLine("What would you like to do? ");
+
+            string menu = Console.ReadLine();
+
+            switch (menu)
+            {
+                case "1":
+                    Console.WriteLine("1. Write");/*Do I need this writeline or just go straight to methos?*/
+
+                    break;
+
+                case "2":
+                    Console.WriteLine("2. Display");
+
+                    break;
+
+                case "3":
+                    Console.WriteLine("");
+                    break;
+
+                case "4":
+
+                    break;
+
+                case "5":
+                    Console.WriteLine("5. Quit");
+                    continueMenu = false;
+                    break;
+
+                    /*default:
+                        Console.WriteLine("Invalid choice, please enter a number between 1 and 5.");
+                        break;*/
+            }
+        }
     }
 }
