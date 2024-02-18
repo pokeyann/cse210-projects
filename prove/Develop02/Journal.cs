@@ -4,9 +4,7 @@ public class Journal
 {
   public void journalEntry()
   {
-
-    Console.WriteLine(DateTime.Now.ToString());
+    DateTime date = DateTime.Now;
+    Console.WriteLine(date);
   }
-
-
 }
