@@ -6,5 +6,12 @@ public class Journal
   {
     DateTime date = DateTime.Now;
     Console.WriteLine(date);
+
+    Prompt prompt = new Prompt();
+    prompt.promptQuestions();
+
+    Console.ReadLine();
+
+
   }
 }

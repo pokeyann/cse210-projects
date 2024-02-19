@@ -27,8 +27,6 @@ class Program
             switch (menu)
             {
                 case "1":
-                    Prompt prompt = new Prompt();
-                    prompt.promptQuestions();
                     Journal journal = new Journal();
                     journal.journalEntry();
                     break;
