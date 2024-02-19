@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class Journal
 {
@@ -10,8 +11,10 @@ public class Journal
     Prompt prompt = new Prompt();
     prompt.promptQuestions();
 
-    Console.ReadLine();
-
+    Entry entry = new Entry();
+    entry.displayEntry();
 
   }
+
+
 }
