@@ -17,46 +17,18 @@ public class Entry
       Console.WriteLine(e);
     }
 
-    SaveToFile(entry);
+    /*displayEntryFile(entry);*/
 
-    List<string> newEntry = ReadFromFile();
+    /*List<string> newEntry = new List<string>();
+
     foreach (string n in newEntry)
     {
       Console.WriteLine(n);
-    }
+    }*/
 
   }
 
-  public static void SaveToFile(List<string> entry)
-  {
-    Console.WriteLine("testing save to file...");
-    string filename = "journal.txt";
 
-    using (StreamWriter outputFile = new StreamWriter(filename))
-    {
-      foreach (string e in entry)
-      {
-        outputFile.WriteLine(e);
-      }
-    }
 
-  }
 
-  public static List<string> ReadFromFile()
-  {
-    Console.WriteLine("testing read from file...");
-    List<string> entry = new List<string>();
-
-    string filename = "journal.txt";
-
-    string[] lines = System.IO.File.ReadAllLines(filename);
-
-    foreach (string line in lines)
-    {
-      Console.WriteLine(line);
-    }
-
-    // need to add .Add
-    return entry;
-  }
 }

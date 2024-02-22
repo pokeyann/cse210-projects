@@ -38,11 +38,13 @@ class Program
                     break;
 
                 case "3":
-                    Console.WriteLine("");
+                    LoadFromFile loadFromFile = new LoadFromFile();
+                    loadFromFile.readFile();
                     break;
 
                 case "4":
-
+                    SaveToFile saveToFile = new SaveToFile();
+                    saveToFile.saveFile();
                     break;
 
                 case "5":
