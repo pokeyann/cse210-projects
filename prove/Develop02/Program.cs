@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel;
 using System.Net;
 using System.Collections.Generic;
+using System.IO;
 
 
 class Program
@@ -21,7 +22,7 @@ class Program
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
-            Console.WriteLine("What would you like to do? ");
+            Console.Write("What would you like to do? ");
 
             string menu = Console.ReadLine();
 
@@ -38,14 +39,11 @@ class Program
                     break;
 
                 case "3":
-                    LoadFromFile loadFromFile = new LoadFromFile();
-                    loadFromFile.readFile();
+
                     break;
 
                 case "4":
 
-                    SaveToFile saveToFile = new SaveToFile();
-                    saveToFile.saveFile();
                     break;
 
                 case "5":

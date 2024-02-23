@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 public class Journal
 {
@@ -15,6 +16,8 @@ public class Journal
     entry.displayEntry();
 
   }
+
+
 
 
 }
