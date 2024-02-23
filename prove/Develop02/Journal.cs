@@ -31,7 +31,7 @@ public class Journal
     }
   }
 
-  public static List<string> ReadFile()
+  public List<string> ReadFile()
   {
     Console.WriteLine("testing read from file...");
 

@@ -7,3 +7,6 @@ journal.txt
 journal.txt
 journal.txt
 changed to e from filename
+hmmmm
+5
+annoyed that theres a bug

@@ -18,6 +18,11 @@ public class Entry
     journal.journalEntry();
 
   }
+
+  public void saveDisplay()
+  {
+    Console.WriteLine();
+  }
 }
 
 

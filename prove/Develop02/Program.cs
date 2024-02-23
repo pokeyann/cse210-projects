@@ -36,7 +36,6 @@ class Program
                 case "2":
                     Console.WriteLine("2. Display");
 
-
                     break;
 
                 case "3":
