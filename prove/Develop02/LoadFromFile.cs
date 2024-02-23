@@ -8,7 +8,7 @@ public class LoadFromFile
   {
     Console.WriteLine("testing read from file...");
 
-    List<string> entry = new List<string>();
+    /* List<string> entry = new List<string>();*/
 
     string filename = "journal.txt";
 
