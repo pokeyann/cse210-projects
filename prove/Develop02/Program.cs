@@ -29,8 +29,8 @@ class Program
             switch (menu)
             {
                 case "1":
-                    Entry entry = new Entry();
-                    entry.displayEntry();
+                    Entry journalEntry = new Entry();
+                    journalEntry.journalEntry();
                     break;
 
                 case "2":

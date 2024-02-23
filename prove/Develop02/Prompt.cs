@@ -31,7 +31,9 @@ public class Prompt
 
     foreach (string prmpt in randomQuestions) /*could this code go in the for loop?  Too scared to break, don't want to try. not enough time to investigate.*/
     {
+
       Console.WriteLine(prmpt);
+      Console.Write("> ");
     }
   }
 }

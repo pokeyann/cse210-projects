@@ -5,9 +5,8 @@ using System.IO;
 
 public class Entry
 {
-  public void displayEntry()
+  public void journalEntry()
   {
-
     DateTime date = DateTime.Now;
     Console.WriteLine(date);
 
@@ -19,10 +18,7 @@ public class Entry
 
   }
 
-  public void saveDisplay()
-  {
 
-  }
 }
 
 

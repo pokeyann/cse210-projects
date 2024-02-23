@@ -23,10 +23,11 @@ public class Journal
 
     string filename = "journal.txt";
 
-    using (StreamWriter outputFile = new StreamWriter(filename)) // add back , true     {
+    using (StreamWriter outputFile = new StreamWriter(filename, true))
       foreach (string e in entry)
       {
         outputFile.WriteLine(e);
+        //outputFile.WriteLine($"{date}~~{prompt}~~{input}"); I think this is where this should happen, now to figure out how.
       }
   }
 
@@ -51,10 +52,14 @@ public class Journal
 
   public void Print()
   {
-    Entry entryPrint = new Entry();
-    Journal journalPrint = new Journal();
+    /*Entry entryPrint = new Entry();*/
+    Journal journalFile = new Journal();
 
-    entryPrint.displayEntry();
+    /*entryPrint.date();*/
+    /*entryPrint.prompt();*/
+    journalFile.ReadFile();
+
+    //entryPrint.journal();
     //need to get date and prompt saving with user input journal entry
 
   }
