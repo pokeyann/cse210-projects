@@ -6,8 +6,6 @@ public class Journal
 {
   public void journalEntry()
   {
-
-
     List<string> entry = new List<string>();
 
     string input = Console.ReadLine();
@@ -28,7 +26,7 @@ public class Journal
     {
       foreach (string e in entry)
       {
-        outputFile.WriteLine(filename);
+        outputFile.WriteLine(e);
       }
     }
   }
@@ -43,13 +41,11 @@ public class Journal
 
     string[] lines = System.IO.File.ReadAllLines(filename);
 
-    /*foreach (string line in lines)
+    foreach (string line in lines)
     {
       Console.WriteLine(line);
-    }*/
+    }
 
     return entry;
   }
-
-
 }

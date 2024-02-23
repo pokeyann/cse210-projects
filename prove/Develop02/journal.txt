@@ -4,3 +4,6 @@ Or won't it append?
 testing display
 journal.txt
 journal.txt
+journal.txt
+journal.txt
+changed to e from filename
