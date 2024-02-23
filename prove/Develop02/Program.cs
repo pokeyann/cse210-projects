@@ -35,6 +35,8 @@ class Program
 
                 case "2":
                     Console.WriteLine("2. Display");
+                    Journal print = new Journal();
+                    print.Print();
 
                     break;
 

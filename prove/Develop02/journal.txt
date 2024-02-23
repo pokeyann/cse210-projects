@@ -1,12 +1,1 @@
-outputfile does too exist
-will it append?
-Or won't it append?
-testing display
-journal.txt
-journal.txt
-journal.txt
-journal.txt
-changed to e from filename
-hmmmm
-5
-annoyed that theres a bug
+testing2

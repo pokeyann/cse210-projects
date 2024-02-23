@@ -11,6 +11,7 @@ public class Journal
     string input = Console.ReadLine();
 
     entry.Add(input);
+    //need to add date and prompt to user input
 
     saveFile(entry);
     ReadFile();
@@ -22,14 +23,13 @@ public class Journal
 
     string filename = "journal.txt";
 
-    using (StreamWriter outputFile = new StreamWriter(filename, true))
-    {
+    using (StreamWriter outputFile = new StreamWriter(filename)) // add back , true     {
       foreach (string e in entry)
       {
         outputFile.WriteLine(e);
       }
-    }
   }
+
 
   public List<string> ReadFile()
   {
@@ -48,4 +48,15 @@ public class Journal
 
     return entry;
   }
+
+  public void Print()
+  {
+    Entry entryPrint = new Entry();
+    Journal journalPrint = new Journal();
+
+    entryPrint.displayEntry();
+    //need to get date and prompt saving with user input journal entry
+
+  }
+
 }

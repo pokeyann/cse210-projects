@@ -21,7 +21,7 @@ public class Entry
 
   public void saveDisplay()
   {
-    Console.WriteLine();
+
   }
 }
 
