@@ -8,62 +8,16 @@ public class Entry
   public void displayEntry()
   {
 
-    List<string> entry = new List<string>();
+    DateTime date = DateTime.Now;
+    Console.WriteLine(date);
 
-    string input = Console.ReadLine();
+    Prompt prompt = new Prompt();
+    prompt.promptQuestions();
 
-    entry.Add(input);
-
-    /*foreach (string e in entry)
-    {
-      Console.WriteLine(e);
-    }*/
-
-    saveFile(entry);
-    ReadFile();
-  }
-  public void saveFile(List<string> entry)
-  {
-    Console.WriteLine("testing save to file...");
-
-    string filename = "journal.txt";
-
-    using (StreamWriter outputFile = new StreamWriter(filename))
-    {
-      foreach (string e in entry)
-      {
-        outputFile.WriteLine(e);
-      }
-    }
+    Journal journal = new Journal();
+    journal.journalEntry();
 
   }
-
-  public static List<string> ReadFile()
-  {
-    Console.WriteLine("testing read from file...");
-
-    List<string> entry = new List<string>();
-
-    string filename = "journal.txt";
-
-    string[] lines = System.IO.File.ReadAllLines(filename);
-
-    /*foreach (string line in lines)
-    {
-      Console.WriteLine(line);
-    }*/
-
-    return entry;
-  }
-  /*displayEntryFile(entry);*/
-
-  /*List<string> newEntry = new List<string>();
-
-  foreach (string n in newEntry)
-  {
-    Console.WriteLine(n);
-  }*/
-
 }
 
 

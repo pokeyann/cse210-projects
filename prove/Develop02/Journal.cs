@@ -6,18 +6,50 @@ public class Journal
 {
   public void journalEntry()
   {
-    DateTime date = DateTime.Now;
-    Console.WriteLine(date);
 
-    Prompt prompt = new Prompt();
-    prompt.promptQuestions();
 
-    Entry entry = new Entry();
-    entry.displayEntry();
+    List<string> entry = new List<string>();
 
+    string input = Console.ReadLine();
+
+    entry.Add(input);
+
+    saveFile(entry);
+    ReadFile();
   }
 
+  public void saveFile(List<string> entry)
+  {
+    Console.WriteLine("testing save to file...");
 
+    string filename = "journal.txt";
+
+    using (StreamWriter outputFile = new StreamWriter(filename, true))
+    {
+      foreach (string e in entry)
+      {
+        outputFile.WriteLine(filename);
+      }
+    }
+  }
+
+  public static List<string> ReadFile()
+  {
+    Console.WriteLine("testing read from file...");
+
+    List<string> entry = new List<string>();
+
+    string filename = "journal.txt";
+
+    string[] lines = System.IO.File.ReadAllLines(filename);
+
+    /*foreach (string line in lines)
+    {
+      Console.WriteLine(line);
+    }*/
+
+    return entry;
+  }
 
 
 }

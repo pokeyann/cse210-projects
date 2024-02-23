@@ -29,12 +29,13 @@ class Program
             switch (menu)
             {
                 case "1":
-                    Journal journal = new Journal();
-                    journal.journalEntry();
+                    Entry entry = new Entry();
+                    entry.displayEntry();
                     break;
 
                 case "2":
                     Console.WriteLine("2. Display");
+
 
                     break;
 
