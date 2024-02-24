@@ -4,9 +4,14 @@ using System.IO;
 
 public class Journal
 {
+  public string _date;
+  public string _prompt;
+  public string _response;
+
+  List<string> entry = new List<string>();
   public void journalEntry()
   {
-    List<string> entry = new List<string>();
+
 
     string input = Console.ReadLine();
 
@@ -27,7 +32,7 @@ public class Journal
       foreach (string e in entry)
       {
         outputFile.WriteLine(e);
-        //outputFile.WriteLine($"{date}~~{prompt}~~{input}"); I think this is where this should happen, now to figure out how.
+        //outputFile.WriteLine($"{e.date}~~{e.prompt}~~{e.input}"); I think this is where this should happen, now to figure out how.
       }
   }
 
