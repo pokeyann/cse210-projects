@@ -1,6 +1,8 @@
 using System;
 using System.ComponentModel;
 using System.Net;
+//Leaving prompt as is for the moment as I try to get the rest of the code working, will change
+//if have time later to be more like what Bro. Parrish showed me 
 public class Prompt
 {
   public void promptQuestions()
