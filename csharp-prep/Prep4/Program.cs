@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 class Program
 {
     static void Main(string[] args)
@@ -10,9 +12,12 @@ class Program
 
         List<int> numbers = new List<int>();
 
-        int userNumber = -1;
+        int userNumber = 0;
+
         do
         {
+            Console.Write("Enter number: ");
+
             numbers.Add(userNumber);
 
             string userInput = Console.ReadLine();
@@ -20,7 +25,32 @@ class Program
 
         } while (userNumber != 0);
 
-        int total = numbers.Sum();
-        Console.WriteLine(total);
+        //int total = numbers.Sum();
+        int sum = 0;
+
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
+
+        Console.WriteLine($"The sum is: {sum}");
+
+
+        double average = numbers.Average();
+        Console.WriteLine($"The average is: {average}");
+
+        //int max = numbers.Max();
+
+        int max = numbers[0];
+
+        foreach (int number in numbers)
+        {
+            if (number > max)
+            {
+                max = number;
+            }
+        }
+
+        Console.WriteLine($"The largest number is: {max}");
     }
 }
