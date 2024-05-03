@@ -19,5 +19,8 @@ class Program
             userNumber = int.Parse(userInput);
 
         } while (userNumber != 0);
+
+        int total = numbers.Sum();
+        Console.WriteLine(total);
     }
 }
