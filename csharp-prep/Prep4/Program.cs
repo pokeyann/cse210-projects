@@ -10,14 +10,14 @@ class Program
 
         List<int> numbers = new List<int>();
 
-        int userInput = -1;
+        int userNumber = -1;
         do
         {
-            numbers.Add(userInput);
+            numbers.Add(userNumber);
 
-            string userNumber = Console.ReadLine();
-            userInput = int.Parse(userNumber);
+            string userInput = Console.ReadLine();
+            userNumber = int.Parse(userInput);
 
-        } while (userInput != 0);
+        } while (userNumber != 0);
     }
 }
