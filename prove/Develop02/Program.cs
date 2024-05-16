@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 class Program
 {
@@ -22,6 +23,7 @@ class Program
         {
             case "1":
                 Console.WriteLine("Write");
+                randomPrompt.Prompt();
                 break;
 
             case "2":
@@ -52,40 +54,39 @@ public class Journal
         // >
         // date
         // user input
-
+        randomPrompt.Prompt();
     }
 
     public void Display()
     {
 
+
+
+        public void SaveToFile()
+        {
+
+        }
+
+        public void LoadFromFile()
+        {
+
+        }
+
+
     }
 
-    public void SaveToFile()
+    public class Entry
     {
-
+        // list of journalEntries 
     }
 
-    public void LoadFromFile()
+    public class GetRandomPrompt //.Next error code so cannot check yet
     {
-
-    }
-
-
-}
-
-public class Entry
-{
-    // list of journalEntries 
-}
-
-public class Random //.Next error code so cannot check yet
-{
-    static string Prompt()
-    {
-        Random randomPrompt = new Random();
-        //var prompts = new List<string>
-        string[] promptQuestions =
-        [
+        private string Prompt()
+        {
+            //var prompts = new List<string>
+            string[] promptQuestions =
+            {
             "What is your favorite dinosaur and why? ",
             "What is the best advice you've ever recieved? ",
             "Who is your celebrity crush? ",
@@ -93,12 +94,14 @@ public class Random //.Next error code so cannot check yet
             "What are you most proud of? ",
             "If you could change one thing, what would it be? ",
             "What are your political beliefs? "
-        ];
-        //int index = random.Next(prompts.Count);
-        int index = randomPrompt.Next(promptQuestions.Length); //.Next is the syntax according to google searches??????
-        //Console.WriteLine(prompts[index]);
-        return promptQuestions[index];
+        };
+            //int index = random.Next(prompts.Count);
+            Random randomPrompt = new Random();
+            int index = randomPrompt.Next(promptQuestions.Length); //.Next is the syntax according to google searches??????
+                                                                   //Console.WriteLine(prompts[index]);
+            return promptQuestions[index];
 
-        //https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-8.0
+            //https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-8.0
+        }
     }
 }
