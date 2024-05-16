@@ -38,7 +38,7 @@ class Program
 
             case "5":
                 //Console.WriteLine("Quit");
-                System.Environment.Exit(0);
+                Environment.Exit(0);
                 break;
         }
     }
@@ -46,16 +46,41 @@ class Program
 
 public class Journal
 {
-    static void Main(string[] args)
+    public void JournalEntry(string promptQuestions)
     {
-
+        // prompt question
+        // >
+        // date
+        // user input
 
     }
+
+    public void Display()
+    {
+
+    }
+
+    public void SaveToFile()
+    {
+
+    }
+
+    public void LoadFromFile()
+    {
+
+    }
+
+
+}
+
+public class Entry
+{
+    // list of journalEntries 
 }
 
 public class Random //.Next error code so cannot check yet
 {
-    static void Main(string[] args)
+    static string Prompt()
     {
         Random randomPrompt = new Random();
         //var prompts = new List<string>
@@ -72,7 +97,7 @@ public class Random //.Next error code so cannot check yet
         //int index = random.Next(prompts.Count);
         int index = randomPrompt.Next(promptQuestions.Length); //.Next is the syntax according to google searches??????
         //Console.WriteLine(prompts[index]);
-        Console.WriteLine($"{promptQuestions[index]}");
+        return promptQuestions[index];
 
         //https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-8.0
     }
