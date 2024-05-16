@@ -6,6 +6,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        Journal newJournal = new Journal();
+
         Console.WriteLine("Hello Develop02 World!");
 
         Console.WriteLine("Welcome to the Journal Program!");
@@ -22,8 +24,8 @@ class Program
         switch (Console.ReadLine())
         {
             case "1":
-                Console.WriteLine("Write");
-                randomPrompt.Prompt();
+                newJournal.JournalEntry();
+
                 break;
 
             case "2":
@@ -46,32 +48,30 @@ class Program
     }
 }
 
-public class Journal
+class Journal
 {
-    public void JournalEntry(string promptQuestions)
+    public void JournalEntry()
     {
-        // prompt question
-        // >
+        DateTime newDate = DateTime.Now;
+        Console.WriteLine(newDate);
+        string randomQuestion = GetRandomPrompt.Prompt();
+        Console.WriteLine(randomQuestion);
+        Console.Write("> ");
+        Console.ReadLine();
         // date
-        // user input
-        randomPrompt.Prompt();
     }
 
     public void Display()
     {
+    }
 
+    public void SaveToFile()
+    {
 
+    }
 
-        public void SaveToFile()
-        {
-
-        }
-
-        public void LoadFromFile()
-        {
-
-        }
-
+    static void LoadFromFile()
+    {
 
     }
 
@@ -82,7 +82,7 @@ public class Journal
 
     public class GetRandomPrompt //.Next error code so cannot check yet
     {
-        private string Prompt()
+        public static string Prompt()
         {
             //var prompts = new List<string>
             string[] promptQuestions =
@@ -94,14 +94,11 @@ public class Journal
             "What are you most proud of? ",
             "If you could change one thing, what would it be? ",
             "What are your political beliefs? "
-        };
-            //int index = random.Next(prompts.Count);
+            };
             Random randomPrompt = new Random();
-            int index = randomPrompt.Next(promptQuestions.Length); //.Next is the syntax according to google searches??????
-                                                                   //Console.WriteLine(prompts[index]);
-            return promptQuestions[index];
+            int index = randomPrompt.Next(promptQuestions.Length);
 
-            //https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-8.0
+            return promptQuestions[index];
         }
     }
 }
