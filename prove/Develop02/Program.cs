@@ -58,7 +58,6 @@ class Journal
         Console.WriteLine(randomQuestion);
         Console.Write("> ");
         Console.ReadLine();
-        // date
     }
 
     public void Display()
