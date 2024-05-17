@@ -18,7 +18,14 @@ class Program
         job2._startYear = 2021;
         job2._endYear = 2026;
 
-        job1.DisplayJob();
-        job2.DisplayJob();
+        Resume myResume = new Resume();
+
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume._name = "Boba Ganoosh";
+
+        myResume.DisplayResume();
+
     }
 }
