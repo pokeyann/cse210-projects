@@ -16,7 +16,6 @@ class Journal
 
     Entry newEntry = new Entry(randomQuestion, response, DateTime.Now.ToString("M/d/yyyy"));
     entries.Add(newEntry);
-
   }
   public void Display()
   {
