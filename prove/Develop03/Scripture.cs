@@ -1,4 +1,4 @@
-
+using System;
 
 /*Scripture keeps track of the reference and text of the scripture. 
 Can hide words and get rendered display of text
@@ -8,7 +8,7 @@ Constructor: accept both reference and text of scripture.
 pass text of scripture as one string with all words, 
 then constructor creating list, 
 splitting  up the words in the string to create Word objects for each one and put them in a list*/
-class Scripture
+class Scripture /*CHANGE THE GETTER SETTER SITUATION, ANNOUNCEMENT SAID THIS IS WRONG. */
 {
   private string book;
   private string chapter;

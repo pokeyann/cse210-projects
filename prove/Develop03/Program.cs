@@ -1,7 +1,7 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
 
-class Program
+class Program /*MUST CHANGE GETTER SETTER SITUATION IN SCRIPTURE.CS, ANNOUNCEMENT SAID THAT IS THE WRONG WAY TO DO IT!*/
 {
     static void Main(string[] args)
     {
@@ -33,7 +33,6 @@ class Program
     {
         Console.WriteLine("Press enter to continue or type 'quit' to finish: ");
     }
-
 }
 
 
