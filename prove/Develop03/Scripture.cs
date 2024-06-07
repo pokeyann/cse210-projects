@@ -1,5 +1,13 @@
 
 
+/*Scripture keeps track of the reference and text of the scripture. 
+Can hide words and get rendered display of text
+behaviors: Hide Words, Get Rendered Text , Is Completely Hidden
+Variables: reference, all the words in the scripture
+Constructor: accept both reference and text of scripture. 
+pass text of scripture as one string with all words, 
+then constructor creating list, 
+splitting  up the words in the string to create Word objects for each one and put them in a list*/
 class Scripture
 {
   private string book;
