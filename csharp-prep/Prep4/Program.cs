@@ -29,17 +29,6 @@ class Program
         Console.WriteLine($"The average is: {numbers.Average()}");
 
         Console.WriteLine($"The largest number is: {numbers.Max()}");
-
-        int max = numbers[0];
-        foreach (int number in numbers)
-        {
-            if (number > max)
-            {
-                max = number;
-            }
-        }
-        Console.WriteLine($"The max is: {max}");
-
     }
 }
 
