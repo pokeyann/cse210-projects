@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 public class Job
 {
-
   public string _companyName = "";
   public string _jobTitle = "";
   public int _startYear = 0;
