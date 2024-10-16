@@ -1,9 +1,107 @@
 using System;
+using System.IO;
 
 class Program
 {
-    static void Main(string[] args)
+
+    static void Main()
     {
-        Console.WriteLine("Hello Develop02 World!");
+        Journal journal = new Journal();
+
+        bool loopContinue = true;
+        while (loopContinue)
+        {
+            Console.WriteLine("Please select one of the following choices: ");
+            Console.WriteLine("1. Write");
+            Console.WriteLine("2. Dispay");
+            Console.WriteLine("3. Load");
+            Console.WriteLine("4. Save");
+            Console.WriteLine("5. Quit");
+            Console.Write("What would you like to do? ");
+
+            int choice = int.Parse(Console.ReadLine());
+            //return choice;
+
+            switch (choice)
+            {
+                case 1:
+
+                    string randomPrompt = PromptQuestion();
+                    Console.WriteLine(randomPrompt);
+                    Console.WriteLine(">");
+                    string userEntry = Console.ReadLine();
+                    journal.AddEntry(randomPrompt, userEntry, DateTime.Now);
+                    /*(Write j = new Write();
+                    j.WriteEntry();*/
+                    break;
+
+                case 2:
+                    journal.WriteEntryDisplay();
+                    /*Write d = new Write();
+                    d.writeEntryDisplay();*/
+                    break;
+
+                case 3:
+
+                    Console.WriteLine("What is the filename? ");
+                    string saveFilename = Console.ReadLine();
+                    journal.SaveToFile(saveFilename);
+                    /*Write l = new Write();
+                    l.LoadFromFile();*/
+                    break;
+
+                case 4:
+                    Console.WriteLine("What is the filename? ");
+                    string loadFilename = Console.ReadLine();
+                    journal.LoadFromFile(loadFilename);
+                    /*Write s = new Write();
+                    s.SaveToFile();*/
+                    break;
+
+                case 5:
+                    Journal q = new Journal();
+                    q.Quit();
+                    break;
+
+            }
+        }
+
+        static string PromptQuestion()
+        {
+            List<string> prompt = new List<string>
+  {
+
+    "What is your earliest memory? ",
+    "Choose between Marvel or DC, and explain why. ",
+    "Describe your experiences today? ",
+    "Who is your favorite child? ",
+    "What is your biggest regret? "
+  };
+            Random question = new Random();
+
+            int index = question.Next(prompt.Count);
+
+            return prompt[index];
+        }
+
     }
 }
+/*static void Main(string[] args)
+{
+    //Call journal.menu
+    // call entry
+    // call file
+    Journal zero = new Journal();
+    zero.Menu();
+
+    Write one = new Write();
+    one.WriteEntry();
+
+    Write two = new Write();
+    two.writeEntryDisplay();
+
+    Write three = new Write();
+    three.LoadFromFile();
+
+    Write four = new Write();
+    four.SaveToFile();*/
