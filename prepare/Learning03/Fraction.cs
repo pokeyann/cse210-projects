@@ -1,0 +1,39 @@
+using System;
+
+public class Fraction
+{
+  private int _top;
+  private int _bottom;
+
+  public Fraction()
+  {
+    _top = 1;
+    _bottom = 1;
+    //Console.WriteLine($"Fraction: {1}/{1}");
+  }
+
+  public Fraction(int wholeNumber)
+  {
+    _top = wholeNumber;
+    _bottom = 1;
+    //Console.WriteLine($"Fraction: {wholeNumber}");
+  }
+
+  public Fraction(int top, int bottom)
+  {
+    _top = top;
+    _bottom = bottom;
+    //Console.WriteLine($"Fraction: {top}/{bottom}");
+  }
+
+  public string GetFractionString()
+  {
+    string number = $"{_top}/{_bottom}";
+    return number;
+  }
+
+  public double GetDecimalValue()
+  {
+    return (double)_top / (double)_bottom;
+  }
+}
