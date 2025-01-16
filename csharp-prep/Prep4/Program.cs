@@ -19,7 +19,10 @@ class Program
             Console.Write("Enter number: ");
             userNumbers = int.Parse(Console.ReadLine());
 
-            numbers.Add(userNumbers);
+            if (userNumbers != 0) //Needed to do this otherwise the average included the 0 in it's calculations.
+            {
+                numbers.Add(userNumbers);
+            }
         }
 
         int sum = 0;
@@ -30,7 +33,9 @@ class Program
 
         Console.WriteLine($"The sum is: {sum}");
 
+        float average = ((float)sum) / numbers.Count;
 
+        Console.WriteLine($"The average is: {average}");
 
     }
 }
