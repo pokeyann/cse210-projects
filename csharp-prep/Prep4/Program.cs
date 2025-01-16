@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 
 class Program
@@ -33,9 +34,15 @@ class Program
 
         Console.WriteLine($"The sum is: {sum}");
 
+        //int average = sum / numbers.Count; according to the sample need to use float so the math is correct
         float average = ((float)sum) / numbers.Count;
 
         Console.WriteLine($"The average is: {average}");
+
+        int max = numbers.Max();
+
+        Console.WriteLine($"The largest number is: {max}");
+
 
     }
 }
