@@ -18,9 +18,14 @@ class Program
             Console.WriteLine("lower");
         }
 
-        else
+        else if (number > guess)
         {
             Console.WriteLine("higher");
+        }
+
+        else
+        {
+            Console.WriteLine("You guessed it!");
         }
 
     }
