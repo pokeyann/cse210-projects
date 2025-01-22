@@ -20,6 +20,14 @@ class Program
 
         job1.Display();
         job2.Display();
+
+        Resume resume1 = new Resume();
+
+        resume1._jobs.Add(job1);
+        resume1._jobs.Add(job2);
+
+        Console.WriteLine(resume1._jobs[0]._jobTitle);
+
     }
 
 }
