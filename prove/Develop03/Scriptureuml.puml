@@ -1,0 +1,7 @@
+@startuml Scripture Memorization
+
+[Program] -> [Scripture] : use
+[Scripture] -> [Reference] : use
+[Scripture] -> [Word] : use
+
+@enduml
