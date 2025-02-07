@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Threading.Tasks.Dataflow;
 
 class Program
@@ -8,11 +9,15 @@ class Program
         Console.WriteLine("Hello Learning03 World!");
 
         Fraction f1 = new Fraction();
-        Console.WriteLine(f1);
-        Fraction f2 = new Fraction(6);
-        Console.WriteLine(f2);
-        Fraction f3 = new Fraction(6, 7);
-        Console.WriteLine(f3);
+        f1.SetBottom(4);
+        Console.WriteLine(f1.GetBottom());
+        Fraction f2 = new Fraction();
+        f2.SetBottom(48);
+        Console.WriteLine(f2.GetBottom());
+        Fraction f3 = new Fraction();
+        f3.SetBottom(88);
+        Console.WriteLine(f3.GetBottom());
+
 
     }
 }
