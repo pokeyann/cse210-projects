@@ -16,23 +16,39 @@ public class Journal
     }
   }
 
-  public void SaveToFile(string filename)
+  public void SaveToFile(string filename) /*Switched code between Save and Load per grading rubic on 2-8-25*/
   {
-    using (StreamWriter outputfile = new StreamWriter(filename))
-      foreach (Entry entry in entries)
-      {
-        outputfile.WriteLine($"{entry.Date} {entry.Prompt}");
-        outputfile.WriteLine($"{entry.UserEntry}\n");
-      }
-  }
-  public void LoadFromFile(string filename)
-  {
+    /* using (StreamWriter outputfile = new StreamWriter(filename))
+       foreach (Entry entry in entries)
+       {
+         outputfile.WriteLine($"{entry.Date} {entry.Prompt}");
+         outputfile.WriteLine($"{entry.UserEntry}\n");
+       } */
+
     string[] lines = System.IO.File.ReadAllLines(filename);
 
     foreach (string line in lines)
     {
       Console.WriteLine(line);
     }
+
+  }
+  public void LoadFromFile(string filename)
+  {
+    /* string[] lines = System.IO.File.ReadAllLines(filename);
+
+     foreach (string line in lines)
+     {
+       Console.WriteLine(line);
+     } */
+
+    using (StreamWriter outputfile = new StreamWriter(filename))
+      foreach (Entry entry in entries)
+      {
+        outputfile.WriteLine($"{entry.Date} {entry.Prompt}");
+        outputfile.WriteLine($"{entry.UserEntry}\n");
+      }
+
   }
 
   public void Quit()
