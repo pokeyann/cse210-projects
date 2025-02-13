@@ -17,6 +17,6 @@ class Reference
 
   public override string ToString()
   {
-    return $"{Book} {Chapter} {StartVerse}-{EndVerse}";
+    return $"{Book} {Chapter}: {StartVerse}-{EndVerse}";
   }
 }
