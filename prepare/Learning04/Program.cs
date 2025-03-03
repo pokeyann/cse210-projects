@@ -16,5 +16,11 @@ class Program
 
         Console.WriteLine(mathAssignment1.GetSummary());
         Console.WriteLine(mathAssignment1.GetHomeworkList());
+
+        WritingAssignment writingAssignment1 = new WritingAssignment("Suzy Marie", "Creative Writing", "All Writers Cry");
+        {
+            Console.WriteLine(writingAssignment1.GetSummary());
+            Console.WriteLine(writingAssignment1.GetWritingInformation());
+        }
     }
 }
