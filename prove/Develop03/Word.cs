@@ -3,38 +3,23 @@ using System.Collections.Concurrent;
 
 public class Word
 {
-  string book = "Proverbs";
-  int chapter = 3;
-  int startVerse = 5;
-  int endVerse = 6;
-  /*string words = "Trust in the Lord with all thine heart and lean not unto thine own understanding';' in all the ways acknowledge him',' and he shall direct thy paths'.'";*/
+  public string Text { get; private set; } /* Could write a separate line for public get and private set, but this seems to work as well*/
+  public bool IsHidden { get; private set; }
 
-  public void AllTheWords()
+  public Word(string text)
   {
-    List<string> eachWord = new List<string> { "Trust", "in", "the", "Lord", "with", "all", "thine", "heart", "and", "lean", "not", "unto", "thine", "own", "understanding';'", "in", "all", "the", "ways", "acknowledge", "him','", "and", "he", "shall", "direct", "thy", "paths'.'" };
+    Text = text;
+    IsHidden = false;
+  }
 
-    foreach (string word in eachWord)
-    {
-      Console.WriteLine(word);
-    }
+  public void Hide()
+  {
+    IsHidden = true;
+    Text = "_";
+  }
+
+  public override string ToString()
+  {
+    return IsHidden ? "_____" : Text;
+  }
 }
-}
-
-/*
-book = Proverbs
-chapter = 3
-startVerse = 5
-endVerse = 6
-words = Trust in the Lord with all thine heart and lean not unto thine own understanding;
-in all the ways acknowledge him, and he shall direct they paths.
-
-loop through and console clear until no all words console cleared or type quit
-
-Scripture scripture = new Scripture();
-
-        bool loopContinue = true;
-        while (loopContinue)
-        {
-            Console.WriteLine(""); book chapter startverse endverse text
-            console clear 
-            should this be in word and called here?  should the loop be in word?*/

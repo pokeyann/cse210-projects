@@ -1,11 +1,11 @@
 using System;
 
-class Reference
+public class Reference
 {
-  string Book { get; set; }
-  int Chapter { get; set; }
-  int StartVerse { get; set; }
-  int EndVerse { get; set; }
+  public string Book { get; set; }
+  public int Chapter { get; set; }
+  public int StartVerse { get; set; }
+  public int EndVerse { get; set; }
 
   public Reference(string book, int chapter, int startVerse, int endVerse)
   {
@@ -18,5 +18,10 @@ class Reference
   public override string ToString()
   {
     return $"{Book} {Chapter}: {StartVerse}-{EndVerse}";
+  }
+
+  internal string[] split(char v)
+  {
+    throw new NotImplementedException();
   }
 }

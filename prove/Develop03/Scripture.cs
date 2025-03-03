@@ -1,23 +1,45 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
-class Scripture
+public class Scripture
 {
-  
-  
-  List<Reference> references = new List<Reference>();
+  public Reference ScriptureReference { get; set; }
+  private List<Word> Words = new List<Word>();
+  private static Random random = new Random();
 
-  public void AddScripture(string book, int chapter, int startVerse, int endVerse)
+  public Scripture(Reference reference, string text)
   {
-    Reference newReference = new Reference(book, chapter, startVerse, endVerse);
-    references.Add(newReference);
+    ScriptureReference = reference;
+    Words = text.Split(' ').Select(word => new Word(word)).ToList();
   }
 
-  public void DisplayScripture()
+  public void Display()
   {
-    foreach (Reference reference in references)
+    Console.Clear();
+    Console.WriteLine($"{ScriptureReference}\n");
+    Console.WriteLine(string.Join(" ", Words));
+  }
+
+  public void HideRandomWords(int count = 2)
+  {
+    var visibleWords = Words.Where(w => !w.IsHidden).ToList();
+
+    if (visibleWords.Count == 0)
+      return;
+
+    int wordsToHide = Math.Min(count, visibleWords.Count);
+
+    for (int i = 0; i < wordsToHide; i++)
     {
-      Console.WriteLine(reference);
-      
+      var wordToHide = visibleWords[random.Next(visibleWords.Count)];
+      wordToHide.Hide();
+      visibleWords.Remove(wordToHide);
     }
+  }
+
+  public bool AllWordsHidden()
+  {
+    return Words.All(w => w.IsHidden);
   }
 }
