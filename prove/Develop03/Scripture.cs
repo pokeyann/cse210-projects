@@ -17,7 +17,7 @@ public class Scripture
   public void Display()
   {
     Console.Clear();
-    Console.WriteLine($"{ScriptureReference}\n");
+    Console.Write($"{ScriptureReference}\n");
     Console.WriteLine(string.Join(" ", Words));
   }
 
