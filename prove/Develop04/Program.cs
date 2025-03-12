@@ -1,10 +1,14 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Develop04 World!");
+
+        BaseMessage baseMessage = new BaseMessage();
 
         bool loopContinue = true;
         while (loopContinue)
@@ -14,20 +18,23 @@ class Program
             Console.WriteLine("2. Start Reflecting Activity");
             Console.WriteLine("3. Start Listing Activity");
             Console.WriteLine("4. Quit");
-            Console.Write("Select a choice from the menu: ");
+            Console.WriteLine("Select a choice from the menu: ");
 
             int userChoice = int.Parse(Console.ReadLine());
 
             switch (userChoice)
             {
                 case 1:
+
+                    baseMessage.CountdownAnimation();
                     break;
                 case 2:
+                    baseMessage.SpinnerAnimation();
                     break;
                 case 3:
                     break;
                 case 4:
-                    /*Quit();*/
+                    Environment.Exit(0);
                     break;
             }
         }
