@@ -41,7 +41,15 @@ class Reflection : BaseMessage
              "Why was this experience meaningful to you? ",
              "Have you ever done anything like this before? ",
              "How can you keep this experience in mind in the future?  ",
-             "What did you learn about yourself from this experience? "
+             "What did you learn about yourself from this experience? ",
+             "What made this time different? ",
+             "Would you do anything different? ",
+             "What would you teach others about after having this experience? ",
+             "Has this experience had a significant affect on your life? ",
+             "Is there someone you would like to talk to about this experience? ",
+             "Did this experience change or alter your life? ",
+             "Did you try to do the hokey pokey and turn yourself around? ",
+             "Did you dance it out? "
             };
 
       Random reflect = new Random();
