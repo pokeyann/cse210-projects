@@ -9,6 +9,7 @@ class Program
         Console.WriteLine("Hello Develop04 World!");
 
         BaseMessage baseMessage = new BaseMessage();
+        Breathing breathing = new Breathing();
 
         bool loopContinue = true;
         while (loopContinue)
@@ -26,7 +27,7 @@ class Program
             {
                 case 1:
 
-                    baseMessage.CountdownAnimation();
+                    breathing.BreathingActivity();
                     break;
                 case 2:
                     baseMessage.SpinnerAnimation();

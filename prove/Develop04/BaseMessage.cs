@@ -2,14 +2,14 @@ using System;
 
 public class BaseMessage
 {
-  private int _seconds;
+  protected int duration;
   public void StartMessage()
   {
-    Console.WriteLine("Welcome to the      Activity.");
-    Console.WriteLine("This activity will help you      ");
-    Console.WriteLine("How long in seconds, would you like your session? ");
-
-    _seconds = int.Parse(Console.ReadLine());
+    Console.WriteLine("Welcome to the       activity.");
+    Console.WriteLine("This activity will help you     ");
+    UserInputDuration();
+    Console.WriteLine("Prepare to begin... ");
+    Thread.Sleep(1000);
   }
 
   public void EndMessage()
@@ -18,9 +18,23 @@ public class BaseMessage
     Console.WriteLine($"You have completed       of the      ");
   }
 
+  public void UserInputDuration()
+  {
+    Console.WriteLine("How long in seconds, would you like your session? ");
+
+    while (true)
+    {
+      int userInput = int.Parse(Console.ReadLine());
+      if (userInput > 0)
+      {
+        break;
+      }
+    }
+  }
+
   public void SpinnerAnimation()
   {
-    Console.WriteLine("Get ready... ");
+    //Console.WriteLine("Get ready... ");
 
     List<string> spinner = new List<string>();
     spinner.Add("|");
@@ -54,9 +68,9 @@ public class BaseMessage
 
   }
 
-  public void CountdownAnimation()
+  public int CountdownAnimation()
   {
-    Console.WriteLine("You may begin in: ");
+    //Console.WriteLine("You may begin in: ");
 
     for (int i = 3; i > 0; i--)
     {
@@ -65,6 +79,6 @@ public class BaseMessage
       Console.Write("\b \b");
     }
 
-
+    return 0;
   }
 }
