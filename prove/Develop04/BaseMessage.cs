@@ -3,19 +3,31 @@ using System;
 public class BaseMessage
 {
   protected int duration;
-  public void StartMessage()
+  public void StartMessage(string name, string description)
   {
-    Console.WriteLine("Welcome to the       activity.");
-    Console.WriteLine("This activity will help you     ");
+    Console.WriteLine($"Welcome to the {name}.");
+    Console.WriteLine(); /*I feel it reads better with the added lines.*/
+    Thread.Sleep(500);
+    Console.WriteLine($"This activity will help you {description}.");
+    Console.WriteLine();
     UserInputDuration();
-    Console.WriteLine("Prepare to begin... ");
-    Thread.Sleep(1000);
+    Console.WriteLine("Get ready... ");
+    SpinnerAnimation();
+    Thread.Sleep(500);
+    Console.WriteLine("You may begin in: ");
+    CountdownAnimation();
+    Thread.Sleep(500);
+    Console.WriteLine();
   }
 
-  public void EndMessage()
+  public void EndMessage(string name)
   {
+    Thread.Sleep(1000);
+    Console.WriteLine();
     Console.WriteLine("Well Done!");
-    Console.WriteLine($"You have completed       of the      ");
+    Console.WriteLine($"You have completed {duration} seconds of the {name}.");
+    Thread.Sleep(1000);
+    Console.WriteLine();
   }
 
   public void UserInputDuration()
@@ -24,8 +36,8 @@ public class BaseMessage
 
     while (true)
     {
-      int userInput = int.Parse(Console.ReadLine());
-      if (userInput > 0)
+      duration = int.Parse(Console.ReadLine());
+      if (duration > 0)
       {
         break;
       }
@@ -34,8 +46,6 @@ public class BaseMessage
 
   public void SpinnerAnimation()
   {
-    //Console.WriteLine("Get ready... ");
-
     List<string> spinner = new List<string>();
     spinner.Add("|");
     spinner.Add("/");
@@ -47,7 +57,7 @@ public class BaseMessage
     spinner.Add("\\");
 
     DateTime startTime = DateTime.Now;
-    DateTime endTime = startTime.AddSeconds(10);
+    DateTime endTime = startTime.AddSeconds(5);
 
     int i = 0;
 
@@ -70,8 +80,6 @@ public class BaseMessage
 
   public int CountdownAnimation()
   {
-    //Console.WriteLine("You may begin in: ");
-
     for (int i = 3; i > 0; i--)
     {
       Console.Write(i);

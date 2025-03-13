@@ -9,7 +9,6 @@ class Program
         Console.WriteLine("Hello Develop04 World!");
 
         BaseMessage baseMessage = new BaseMessage();
-        Breathing breathing = new Breathing();
 
         bool loopContinue = true;
         while (loopContinue)
@@ -26,7 +25,7 @@ class Program
             switch (userChoice)
             {
                 case 1:
-
+                    Breathing breathing = new Breathing();
                     breathing.BreathingActivity();
                     break;
                 case 2:
