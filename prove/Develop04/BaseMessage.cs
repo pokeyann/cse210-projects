@@ -12,7 +12,7 @@ public class BaseMessage
     Console.WriteLine();
     UserInputDuration();
     Console.WriteLine("Get ready... ");
-    SpinnerAnimation();
+    SpinnerAnimation(3);
     Thread.Sleep(500);
     Console.WriteLine("You may begin in: ");
     CountdownAnimation();
@@ -44,7 +44,7 @@ public class BaseMessage
     }
   }
 
-  public void SpinnerAnimation()
+  public void SpinnerAnimation(int seconds)
   {
     List<string> spinner = new List<string>();
     spinner.Add("|");
@@ -56,8 +56,8 @@ public class BaseMessage
     spinner.Add("-");
     spinner.Add("\\");
 
-    DateTime startTime = DateTime.Now;
-    DateTime endTime = startTime.AddSeconds(5);
+    //DateTime startTime = DateTime.Now; changed due to Reflection Activity
+    DateTime endTime = DateTime.Now.AddSeconds(seconds);
 
     int i = 0;
 
@@ -68,13 +68,16 @@ public class BaseMessage
       Thread.Sleep(1000);
       Console.Write("\b \b");
 
-      i++;
+      i = (i + 1) % spinner.Count;
 
-      if (i >= spinner.Count)
-      {
-        i = 0;
-      }
+      //i++;
+
+      //if (i >= spinner.Count)
+      //{
+      // i = 0;
+      //}
     }
+    Console.WriteLine("");
 
   }
 

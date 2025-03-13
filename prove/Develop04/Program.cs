@@ -29,7 +29,8 @@ class Program
                     breathing.BreathingActivity();
                     break;
                 case 2:
-                    baseMessage.SpinnerAnimation();
+                    Reflection reflection = new Reflection();
+                    reflection.ReflectionActivity();
                     break;
                 case 3:
                     break;
