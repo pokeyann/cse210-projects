@@ -1,0 +1,3 @@
+Simple|Boba|Ganoosh|10|[X] Boba
+Eternal|Silly|Goose|10|[ ] Silly
+Checklist|Hokey|Pokey|10|1|10|[X] Hokey (1/1)
