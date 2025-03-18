@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Reflection.Metadata.Ecma335;
 
 class GoalManager
 {
@@ -32,13 +33,25 @@ class GoalManager
       }
     }
   }
+
+  public void ShowScore()
+  {
+    foreach (var goal in Goals)
+    {
+      goal.GetPoints();
+    }
+    Console.WriteLine($"Total Score: {TotalScore}");
+
+    return;
+  }
+
   public void ShowGoals()
   {
     foreach (var goal in Goals)
     {
       Console.WriteLine(goal.GetStatus());
     }
-    Console.WriteLine($"Total Score: {TotalScore}");
+    return;
   }
   public void SaveToFile(string filename)
   {

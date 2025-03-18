@@ -12,6 +12,7 @@ class Program
 
         while (true)
         {
+            manager.ShowScore();
             Console.WriteLine("Menu Options: ");
             Console.WriteLine("1. Create New Goal ");
             Console.WriteLine("2. List Goals.");
