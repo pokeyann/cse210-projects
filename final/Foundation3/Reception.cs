@@ -1,10 +1,12 @@
 using System;
+using System.Runtime.CompilerServices;
+using System.ComponentModel;
 
 public class Reception : BaseEvent
 {
   private string _rsvpEmail;
 
-  public Reception(string title, string description, DateTime date, Timespan time, Address address, string rsvpEmail) : BaseEvent(title, description, date, time, address)
+  public Reception(string title, string description, DateTime date, TimeSpan time, Address address, string rsvpEmail) : base(title, description, date, time, address)
   {
     _rsvpEmail = rsvpEmail;
   }

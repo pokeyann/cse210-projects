@@ -1,15 +1,15 @@
 using System;
 using System.Runtime.CompilerServices;
 
-abstract class BaseEvent
+public class BaseEvent
 {
   protected string EventTitle;
   protected string Description;
   protected DateTime Date;
-  protected Timespan Time;
+  protected TimeSpan Time;
   protected Address Address;
 
-public BaseEvent(string eventTitle, string description, DateTime date, Timespan time, Address address)
+public BaseEvent(string eventTitle, string description, DateTime date, TimeSpan time, Address address)
 {
   EventTitle = eventTitle;
   Description = description;

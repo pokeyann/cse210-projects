@@ -1,11 +1,13 @@
 using System;
+using System.Runtime.CompilerServices;
+using System.ComponentModel;
 
 public class Lecture : BaseEvent
 {
   private string _speaker;
   private int _capacity;
 
-  public Lecture(string title, string description, DateTime date, Timespan time, Address address, string speaker, int capacity) : BaseEvent(title, description, date, time, address)
+  public Lecture(string title, string description, DateTime date, TimeSpan time, Address address, string speaker, int capacity) : base(title, description, date, time, address)
   {
     _speaker = speaker;
     _capacity = capacity;
