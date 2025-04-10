@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-/*Notes to self: Had to change to public so the program would work, but I thought it had to be abstract.  Thought it may have to do with using System, but research says this has no bearing. Also date and time is working, but am still unsure of what the original issue was and what changed to fix.*/
+/*Notes to self: Had to change to public so the program would work, but I thought it had to be abstract.  Thought it may have to do with using System, but research says this has no bearing. Also date and time is working, but am still unsure of what the original issue was and what changed to fix.  Answer it should have been public abstract class*/
 
 public class BaseEvent 
 {
