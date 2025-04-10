@@ -20,11 +20,15 @@ public BaseEvent(string eventTitle, string description, DateTime date, TimeSpan 
 
 public string GetStandardDetails()
 {
+  /*
   return $"Title: {EventTitle}\n"
     + "Description: {Description}\n"
     + "Date: {Date.ToString()}\n"
     + "Time: {Time.ToString()}\n"
     + "Address: {Address.GetFullAddress()}";
+    */
+
+        return $"\nTitle: {EventTitle}\nDescription: {Description}\nDate: {Date.ToShortDateString()}\nTime: {Time}\nAddress: {Address.GetFullAddress()}";
 }
 
 public virtual string GetFullDetails()
@@ -34,9 +38,13 @@ public virtual string GetFullDetails()
 
 public string GetShortDescription()
 {
+  /*
   return $"Type: {GetType().Name}\n"
     + "Title: {EventTitle}\n"
     + "Date: {Date.ToString()}";
+    */
+  
+  return $"\nType: {GetType().Name}\nTitle: {EventTitle}\nDate: {Date.ToString()}";
 }
 
 
